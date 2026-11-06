@@ -7,6 +7,8 @@ Este repositorio despliega una instancia sencilla de **Ghost** usando Docker Com
 Ghost es una plataforma de publicación enfocada en blogs, newsletters y sitios de contenido.  
 Incluye panel de administración, editor moderno y gestión de usuarios en una solución ligera.
 
+![image](https://storage.googleapis.com/media-newsinitiative/images/ghost_logo.format-webp.webp)
+
 ## Arquitectura de este despliegue
 
 La configuración está en [compose.yaml](C:/Users/gustavo.roales/Developer/projects/docker/ghost/compose.yaml) y define:
@@ -50,6 +52,24 @@ Acceso local:
 
 - Sitio: `http://localhost:2368`
 - Alta inicial de admin (primera ejecución): `http://localhost:2368/ghost`
+
+## Configuración inicial de Ghost (primer arranque)
+
+Después de levantar el contenedor por primera vez:
+
+1. Abre `http://localhost:2368/ghost`.
+2. Completa el asistente de Ghost:
+   - **Site title**: nombre público del sitio.
+   - **Full name**: nombre del usuario administrador.
+   - **Email address**: email del administrador.
+   - **Password**: contraseña del administrador.
+3. Pulsa **Create account** para terminar el alta.
+4. Inicia sesión en `http://localhost:2368/ghost` con ese usuario.
+
+Notas:
+
+- Este asistente se muestra solo una vez por instalación (mientras se conserve [content/](C:/Users/gustavo.roales/Developer/projects/docker/ghost/content)).
+- Si luego cambias la URL pública (dominio/proxy), actualiza el valor `url` en [compose.yaml](C:/Users/gustavo.roales/Developer/projects/docker/ghost/compose.yaml) y reinicia con `docker compose up -d`.
 
 ## Datos persistentes
 
