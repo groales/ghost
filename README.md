@@ -7,8 +7,6 @@ Este repositorio despliega una instancia sencilla de **Ghost** usando Docker Com
 Ghost es una plataforma de publicación enfocada en blogs, newsletters y sitios de contenido.  
 Incluye panel de administración, editor moderno y gestión de usuarios en una solución ligera.
 
-![image](https://storage.googleapis.com/media-newsinitiative/images/ghost_logo.format-webp.webp)
-
 ## Arquitectura de este despliegue
 
 La configuración está en [compose.yaml](C:/Users/gustavo.roales/Developer/projects/docker/ghost/compose.yaml) y define:
